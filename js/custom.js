@@ -6,6 +6,12 @@ $(function () {
 
     })
 
+    $('.meun_bar').on('click', function () {
+        $(this).toggleClass('on');
+        $('.gnb').toggleClass('on');
+
+    });
+
     $('.mainslide').slick({
         arrows: true,
         dots: false,
@@ -35,7 +41,35 @@ $(function () {
         arrows: true,
         cssEase: 'linear'
 
+    });
+
+    $('.event_slide').slick({
+        infinite: true,
+        speed: 500,
+        fade: true,
+
+        asNavFor: ".tit_slide",
+        arrows: false,
+        cssEase: 'linear'
+
+    })
+
+    $('.tit_slide').slick({
+        infinite: true,
+        speed: 500,
+        fade: true,
+        asNavFor: ".event_slide",
+        cssEase: 'linear',
+        arrows: false,
 
 
+    })
+
+
+    $('.mainevent .tit_btn .prev').on('click', function () {
+        $('.event_slide').slick('slickPrev')
+    });
+    $('.mainevent .tit_btn .next').on('click', function () {
+        $('.event_slide').slick('slickNext')
     });
 })
