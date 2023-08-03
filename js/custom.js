@@ -21,6 +21,18 @@ $(function () {
         cssEase: 'linear'
     })
 
+    $('.left_slide').on('init afterChange', function (e, s, c) {
+        const current = $('.mainroom .slick-current');
+        current.addClass('on').siblings().removeClass('on');
+
+        $('.mainroom .slide_num span').text(c ? (c + 1) : 1);
+        $('.mainroom .slide_num strong').text(s.slideCount);
+
+        console.log(s.slideCount)
+
+
+    });
+
     $('.left_slide').slick({
         infinite: true,
         speed: 500,
@@ -38,7 +50,7 @@ $(function () {
         fade: true,
         cssEase: 'linear',
         asNavFor: ".left_slide",
-        arrows: true,
+        arrows: false,
         cssEase: 'linear'
 
     });
@@ -62,7 +74,6 @@ $(function () {
         cssEase: 'linear',
         arrows: false,
 
-
     })
 
 
@@ -71,5 +82,13 @@ $(function () {
     });
     $('.mainevent .tit_btn .next').on('click', function () {
         $('.event_slide').slick('slickNext')
+    });
+
+
+    $('.mainroom .slide_btn .prev').on('click', function () {
+        $('.left_slide').slick('slickPrev')
+    });
+    $('.mainroom .slide_btn .next').on('click', function () {
+        $('.left_slide').slick('slickNext')
     });
 })
