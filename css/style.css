@@ -185,15 +185,26 @@
 
 .mainslide {
     width: 100%;
-    border-radius: 0 0 0 200px;
+
     overflow: hidden;
     position: relative;
 
 }
 
+.mainslide iframe {
+    height: 100vh;
+    width: 100%;
+}
+
+
+
 .itm {
     height: 100vh;
 }
+
+
+
+
 
 
 
