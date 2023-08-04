@@ -1,4 +1,28 @@
 $(function () {
+
+
+    // const txt = $('.roll').text();
+
+    // txt.each(function (idx, el) {
+    //     el.wrap('<span>')
+    // })
+
+    // const CA = document.querySelector('.roll');
+    // const TXT = document.querySelector('.roll').innerText;
+    // console.log(TXT);
+
+    // const LI = [...TXT].map((it, idx) => {
+    //     return '<span>' + it + '</span>'
+    // });
+
+    // console.log(LI.join(''));
+
+    // CA.innerHTML = LI.join('');
+
+
+
+
+
     $(window).on('scroll', function () {
         let sct = $(window).scrollTop();
         sct > 0 ? $('.header').addClass('on') : $('.header').removeClass('on');
