@@ -1026,6 +1026,7 @@ embed {
 
     .header .gnb .gnb_box>ul>li .sub>li {
         margin: 0 25px 20px 0;
+        font-size:14px;
     }
 
     .header .gnb .bottom {
